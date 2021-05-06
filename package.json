@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "engines": {
 	"node": "12.18.4"
-  }
+  },
   "description": "Icon made using - https://fontmeme.com/\r Icon Link - https://fontmeme.com/permalink/200813/a083b88a756ab075f3d319b5b8b0fb97.png",
   "main": "server.js",
   "scripts": {

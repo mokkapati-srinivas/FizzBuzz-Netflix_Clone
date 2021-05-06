@@ -1,0 +1,39 @@
+{
+  "name": "fizbuz",
+  "version": "1.0.0",
+  "description": "Icon made using - https://fontmeme.com/\r Icon Link - https://fontmeme.com/permalink/200813/a083b88a756ab075f3d319b5b8b0fb97.png",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fiz-Buz/WtProject.git"
+  },
+  "author": "srinivas,abhinav,vineeth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fiz-Buz/WtProject/issues"
+  },
+  "homepage": "https://github.com/Fiz-Buz/WtProject#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "dotenv": "^8.5.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "express-flash": "0.0.2",
+    "express-session": "^1.17.1",
+    "html": "^1.0.0",
+    "mongodb": "^3.6.6",
+    "mongoose": "^5.12.7",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

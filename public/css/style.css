@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: url("../img/popcorn.jpg") no-repeat center center/cover;
+    color: #333;
+    height: 100vh;
+    line-height: 1.6;
+}
+
+.logo {
+    padding-top: 5px;
+    padding-bottom: 0;
+    height: 50px;
+    width: 150px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#000;
+    color: #fff;
+    opacity: 0.9;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0px;
+    padding: 0 20px;
+}
+
+.navbar #signin {
+    text-decoration: none;
+    color: #000;
+    background-color: #fcff00;
+    font-weight: bold;
+    padding: 5px 20px;
+    border-radius: 7px;
+}
+
+#main{
+    color: white;
+    text-align: center;
+    padding-top: 250px;
+}
+
+#large{
+    font-size: 50px;
+}
+
+.bg-image {
+    /* The image used */
+    background-image: url("../img/popcorn.jpg");
+    
+    /* Add the blur effect */
+    filter: blur(5px);
+    -webkit-filter: blur(7px); 
+    
+    /* Full height */
+    height: 100%; 
+    
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* Position text in the middle of the page/image */
+  .bg-text {
+    /* background-color: rgb(0,0,0);Fallback color */
+    /* background-color: rgba(0,0,0, 0.4);Black w/opacity/see-through */
+    background: none;
+    color: white;
+    font-weight: bold;
+    /* border: 3px solid #f1f1f1; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 60%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .btn{
+    text-decoration: none;
+    color: #000;
+    background-color: #fcff00;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 8px 30px;
+    border-radius: 7px;
+  }
+
+  .large{
+      font-size: 40px;
+  }
+
+  .medium{
+      font-size: 30px;
+  }

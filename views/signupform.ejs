@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        FizzBuzz
+    </title>
+
+    <!-- Icon Link - https://fontmeme.com/permalink/200813/b82fbf5315c4a58a550e89e14d6df52c.png.
+    Made by using FontMeme. Checkout the website - https://fontmeme.com/-->
+    <link rel="icon" href="https://fontmeme.com/permalink/200813/b82fbf5315c4a58a550e89e14d6df52c.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/stylesignupform.css">
+</head>
+<body>
+    <div class="bg-image">
+    </div>
+    <header id="navigation">
+      <nav class="navbar">
+        <a href="/">
+            <img class="logo" src="./img/fizzbuzz.png" alt="Logo">
+        </a>
+        <a href="/signin" id="signin">Sign In</a>
+      </nav>
+  </header>
+  <script>
+    function validate()
+    {
+      var fname = document.getElementById("firstName").value;
+      var lname = document.getElementById("lastName").value;
+      var email = document.getElementById("email").value;
+      var pw1 = document.getElementById("password").value;
+      var pw2 = document.getElementById("password2").value;
+      var regex = /^[a-zA-Z]+$/;
+      var crct = true;
+      if(!regex.test(fname))
+      {
+        document.getElementById("e1").style.display="block";
+        crct =  false;
+      }
+      else
+      {
+        document.getElementById("e1").style.display="none";
+      }
+      if(!regex.test(lname))
+      {
+        document.getElementById("e2").style.display="block";
+        crct =  false;
+      }
+      else
+      {
+        document.getElementById("e2").style.display="none";
+      }
+      regex = /^(([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5}){1,25})+([;.](([a-zA-Z0-9_\-\.]+)@{[a-zA-Z0-9_\-\.]+0\.([a-zA-Z]{2,5}){1,25})+)*$/ ;
+      if(!regex.test(email))
+      {
+        document.getElementById("e3").style.display="block";
+        crct =  false;
+      }
+      else
+      {
+        document.getElementById("e3").style.display="none";
+      }
+      regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/ ;
+      if(!(pw1===pw2) || (!regex.test(pw1) || !regex.test(pw2)))
+      {
+        document.getElementById("e4").innerHTML="Passwords should match and have 8-15 characters, one Uppercase, Lowercase, Number, Special Character";
+        document.getElementById("e4").style.display="block";
+        crct =  false;
+      }
+      else
+      {
+        document.getElementById("e4").style.display="none";
+      }
+      return crct;
+    }
+  </script>
+    <div class="bg-text">
+        <div class="form-wrap">
+
+          <p style="font-size: 18px; display: block;" id="error" ><%- include ("./partials/messages"); %></p>
+          <form action="/signup" method="POST" onsubmit="return validate()">
+            <div class="form-group">
+              <input type="text" id="firstName" name="firstName" class="input" placeholder=" First Name"/>
+              <small id="e1" style="display: none; color: #fcff00;">First name should contain only letters of minimum length 1</small>
+            </div>
+            <br>
+            <div class="form-group">
+              <input type="text" id="lastName" name="lastName" placeholder=" Last Name" />
+              <small id="e2" style="display: none; color: #fcff00;">Last name should contain only letters of minimum length 1</small>
+            </div>
+            <br>
+            <div class="form-group">
+              <input type="email" name="email" id="email" placeholder=" Email"/>
+              <small id="e3" style="display: none; color: #fcff00;">Email Invalid</small>
+            </div>
+            <br>
+            <div class="form-group">
+              <input type="password" name="password" id="password" placeholder=" Password"/>
+              
+            </div>
+            <br>
+            <div class="form-group">
+              <input type="password" name="password2" id="password2" placeholder=" Confirm Password"/>
+              <small id="e4" style="display: none; color: #fcff00;"></small>
+            </div>
+            <br>
+            <!-- <br> -->
+            <!-- <button type="submit" class="btn">Sign Up</button> -->
+            <input type="submit" value="Sign Up" class="btn">
+            
+          </form>
+        </div>
+        <!-- <footer>
+          <p id="account">Already Have an Account? <a href="/signin" id="yellow-color">Login Here</a></p>
+        </footer> -->
+      </div>
+
+</body>
+</html>

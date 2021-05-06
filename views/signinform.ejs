@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        FizzBuzz
+    </title>
+
+    <!-- Icon Link - https://fontmeme.com/permalink/200813/b82fbf5315c4a58a550e89e14d6df52c.png.
+    Made by using FontMeme. Checkout the website - https://fontmeme.com/-->
+    <link rel="icon" href="https://fontmeme.com/permalink/200813/b82fbf5315c4a58a550e89e14d6df52c.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/stylesignupform.css">
+</head>
+<body>
+    <div class="bg-image">
+    </div>
+    <header id="navigation">
+      <nav class="navbar">
+          <a href="/">
+            <img class="logo" src="./img/fizzbuzz.png" alt="Logo">
+        </a>
+        <a href="/signup" id="signin">Sign Up</a>
+      </nav>
+  </header>
+    <div class="bg-text">
+        <div class="form-wrap">
+          <p style="font-size: 18px; display: block;" id="error" ><%- include ("./partials/messages"); %></p>
+          <form method="POST" action="/signin">
+            <div class="form-group">
+              <input type="email" name="email" id="email" placeholder=" Email"/>
+            </div>
+            <br>
+            <div class="form-group">
+              <input type="password" name="password" id="password" placeholder=" Password"/>
+            </div>
+            <br>
+           
+            <!-- <br> -->
+            <!-- <a href="./Index.html">
+              <button type="submit" class="btn">Sign In</button>
+            </a> -->
+            <input type="submit" value="Sign In" class="btn">
+            <!-- <a href="/index" class="btn">Sign In</a> -->
+          </form>
+        </div>
+        <!-- <footer>
+          <p id="account">Don't Have an Account? <a href="/signup" id="yellow-color">Sign Up Here</a></p>
+        </footer> -->
+      </div>
+
+</body>
+</html>

@@ -157,7 +157,7 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 const flash = require('connect-flash');
 const session = require('express-session');
-const bcrypt=require("bcrypt");
+const bcrypt=require("bcryptjs");
 
 const app = express();
 
